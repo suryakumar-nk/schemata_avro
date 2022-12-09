@@ -39,29 +39,16 @@
       "doc": "The action-ability of the message."
     },
     {
-      "name": "distributionKind",
-      "type": {
-        "name": "DistributionKind",
-        "namespace": "eu.driver.model.edxl",
-        "type": "enum",
-        "symbols": [
-          "Report",
-          "Update",
-          "Cancel",
-          "Request",
-          "Response",
-          "Dispatch",
-          "Ack",
-          "Error",
-          "SensorConfiguration",
-          "SensorControl",
-          "SensorStatus",
-          "SensorDetection",
-          "Unknown",
-          "NoAppropriateDefault"
-        ]
-      },
-      "doc": "The function of the message."
+      "name": "tags",
+      "doc": "Optional map containing transport request specific information: key – unique name of the specific property; value – value of that property",
+      "type": [
+        "null",
+        {
+          "type": "map",
+          "values": "string"
+        }
+      ],
+      "default": null
     }
   ]
 }
